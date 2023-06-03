@@ -49,7 +49,7 @@ module Fiddler
     params      = args_types.keys.join(', ')
     values      = args_types.values
     # cdefs[name] = Function.new(address, values, ret_type, call_type, options)
-    cdefs[name] = Function.new(address, values, ret_type, options)
+    cdefs[name] = Function.new(address, values, ret_type)
 
     module_eval <<-RB, __FILE__, __LINE__ + 1
     def #{name}(#{params})
